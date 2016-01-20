@@ -75,7 +75,7 @@
 
                         <hr/>
 
-                        <h2>3.API Test with access_token</h2>
+                        <h2>3.API test with access_token</h2>
 
                         <form action="{{url('user')}}" method="get">
                             <label>
