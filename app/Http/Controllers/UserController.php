@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use LucaDegasperi\OAuth2Server\Facades\Authorizer;
+
 
 class UserController extends Controller
 {
@@ -21,6 +23,7 @@ class UserController extends Controller
      */
     public function getUser()
     {
-        return Authorizer::getResourceOwnerId();
+        dump(User::findOrFail(Authorizer::getResourceOwnerId())->toArray());
+        return 'UID:' . Authorizer::getResourceOwnerId();
     }
 }
