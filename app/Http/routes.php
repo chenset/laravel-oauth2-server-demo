@@ -68,6 +68,10 @@ Route::group(['middleware' => ['web']], function () {
         return Response::json(Authorizer::issueAccessToken());
     });
 
+    Route::post('oauth/access_token', function() {
+        return Response::json(Authorizer::issueAccessToken());
+    });
+
 
     Route::get('/user', ['middleware' => 'oauth:1', 'uses' => 'UserController@getUser']);
 });
