@@ -2,14 +2,14 @@
 
 Base on Laravel 5.2 & laravel-oauth2-server 5.1
 
-### Hot to run
+### How to run
 
 ``` bash  
 composer install
 
 php artisan key:generate
 
-php artisan migrate  # Must change .env config before
+php artisan migrate
 ```    
  
 ### Add sample record to tables
